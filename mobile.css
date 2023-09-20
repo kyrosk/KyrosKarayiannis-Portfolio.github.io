@@ -58,13 +58,15 @@
         margin-left: -50%; 
     }
     .profile-images {
-        display: flex;
-        flex-wrap: wrap;
+        width: 170%; 
+        margin-left: -33%; 
+
         justify-content: center;
     }
     .about-image {
-        width: 100%;
-        max-width: 200px;
+        width: 200%;
+        margin-left: -33%; 
+
         margin: 0 10px 10px 0;
     }
     .section-text {
@@ -84,6 +86,8 @@
     }
     .project h3 {
         font-size: 18px;
+        margin-top: 50px;
+
     }
     .cta-button {
         font-size: 16px;
