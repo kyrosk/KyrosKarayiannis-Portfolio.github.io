@@ -3,7 +3,7 @@
         text-align: center;
     }
     header h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     nav ul {
@@ -14,18 +14,61 @@
         display: block;
         margin: 10px 0;
     }
-    
+    nav a {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
     .profile-images {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .about-image {
         width: 100%;
         max-width: 200px;
-        margin: 0 auto 10px;
+        margin: 0 10px 10px 0;
     }
-    
+    .section-text {
+        font-size: 16px;
+    }
+
+    .project-carousel {
+        padding: 10px;
+    }
+    .project {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .project h1 {
+        font-size: 24px;
+    }
+    .project h3 {
+        font-size: 18px;
+    }
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 5px;
+    }
     .project-details {
         display: none;
+        font-size: 16px;
+    }
+
+    .contact-content p {
+        font-size: 16px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
     }
 }
