@@ -3,7 +3,7 @@
         text-align: center;
     }
     header h1 {
-        font-size: 28px;
+        font-size: 15px;
     }
 
     #home .container {
@@ -11,7 +11,7 @@
         padding: 10px; 
     }
     #home h1 {
-        font-size: 26px; 
+        font-size: 32px; 
         white-space: nowrap; 
         overflow: hidden; 
     }
@@ -30,7 +30,7 @@
         margin: 10px 0;
     }
     nav a {
-        font-size: 18px;
+        font-size: 15px;
         padding: 10px;
         border-radius: 5px;
     }
