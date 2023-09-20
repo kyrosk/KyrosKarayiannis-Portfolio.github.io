@@ -6,11 +6,9 @@
         font-size: 28px;
     }
 
-    #home .container {
+    #home .container h1 {
         text-align: center;
         padding: 10px;
-    }
-    #home h1 {
         font-size: 20px;
         white-space: nowrap; 
     }
