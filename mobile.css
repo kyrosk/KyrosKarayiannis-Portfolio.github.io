@@ -49,10 +49,11 @@
     }
 
     
-    .container p {
+    #about p {
         font-size: 18px;
-        line-height: 1.5;
-        margin-top: 10px;
+        padding: 10px;
+        width: 180%;
+        margin-left: -44%; /* Add a negative margin to move it to the left */
     }
     .profile-images {
         display: flex;
@@ -89,9 +90,9 @@
         border-radius: 5px;
     }
     .project-details {
-        line-height: 1.5;
-        margin-top: 10px;
-        font-size: 15px;
+        width: 120%;
+        margin-left: -10%;
+        font-size: 16px;
     }
 
     .contact-content p {
