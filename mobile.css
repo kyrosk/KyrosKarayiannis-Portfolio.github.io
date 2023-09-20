@@ -42,7 +42,7 @@
     }
     .container p {
         padding: 10px;
-        font-size: 18px;
+        font-size: 1px;
     }
     .profile-images {
         display: flex;
