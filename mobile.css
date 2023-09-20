@@ -52,10 +52,10 @@
 
     
     #about p {
-        font-size: 18px;
+        font-size: 14px;
         padding: 10px;
-        width: 190%;
-        margin-left: -50%; 
+        width: 150%;
+        margin-left: -20%; 
     }
     .profile-images {
         width: 170%; 
