@@ -6,6 +6,19 @@
         font-size: 28px;
     }
 
+    #home .container {
+        text-align: center;
+        padding: 20px;
+    }
+    #home h1 {
+        font-size: 28px;
+    }
+    #home .section-text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+
     nav ul {
         padding: 0;
         text-align: center;
