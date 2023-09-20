@@ -58,13 +58,10 @@
     }
     .profile-images {
         width: 100%; 
-        margin-left: 0%; 
+        margin-left: 2%; 
 
-        justify-content: center;
     }
     .about-image {
-        width: 200%;
-        margin-left: -33%; 
 
         margin: 0 10px 10px 0;
     }
