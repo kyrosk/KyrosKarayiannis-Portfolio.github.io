@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyros Karayiannis - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>.Kyros</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="centered">
+        <div class="container">
+            <h1>Welcome to my portfolio</h1>
+            <p class="section-text">Hello :) my name is Kyros Karayiannis</p>
+            <p class="section-text">I hold a Bachelors degree in Computer Science alongside with a Masters degree in Cyber Physical Systems</p>
+        </div>
+    </section>
+    
+    <section id="about" class="centered">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I've spent nearly 13 years on the football field, honing my skills and cultivating a deep passion for the game. Beyond sports, I've found solace in the soothing strums of my guitar and the joy of expressing myself through singing. Yet, my life isn't confined to indoor pursuits; I have an insatiable love for fishing and outdoor sports that fuels my adventurous spirit. I thrive on adrenaline rushes and challenge myself to push boundaries. I'm also an avid traveler, constantly seeking new horizons and immersing myself in different cultures, savoring the richness of the world's diversity. Whether it's wandering through bustling markets in Asia or exploring ancient ruins in Europe, I find genuine joy in the journey. And when the opportunity arises, I love to dive into crystal-clear waters for a refreshing swim, connecting with nature in its most elemental form. In the professional realm, I aspire to become a web developer or delve into the captivating world of cyber security, where I can use my tech skills to safeguard digital landscapes. My life is a dynamic blend of sportsmanship, creativity, outdoor exploration, a relentless pursuit of new challenges, and an unquenchable thirst for discovering the beauty of our planet and its people.</p>
+            <div class="profile-images">
+                <img src="images/me.jpg" alt="Image 1" class="about-image">
+                <img src="images/guitar.jpg" alt="Image 2" class="about-image">
+                <img src="images/football.jpg" alt="Image 3" class="about-image">
+                <img src="images/fishing.jpg" alt="Image 4" class="about-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="centered">
+        <div class="project-carousel">
+            <div class="project" data-index="1">
+                <h1>Projects</h1>
+                <h3>Hear and avoid - a smart gadget</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>Sensor prototype design to help people with hearing problems avoiding loud sounds from surroundings. Using 3 light and sound sensors, raspberry Pi, grove Pi and a representation of a human head, the project with the usage of python programming language, successfully presented a prototype that can be deployed in the real world.</p>
+                </div>
+            </div>
+            <div class="project" data-index="2">
+                <h1>Projects</h1>
+                <h3>User Interface Designs for Smart Home Device 
+                    Security</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>As part of my dissertation for the successful completion of my Masters degree, I 
+                        created an interactive prototype using Figma (prototype tool) to provide smart 
+                        homes privacy and security as well as the ability to manipulate, secure and control 
+                        the data of their smart home devices. Alongside with data safety, the dissertation 
+                        examined ways to support users’ security through different frameworks applied 
+                        in the prototype.</p>
+                </div>
+            </div>
+            <div class="project" data-index="3">
+                <h1>Projects</h1>
+                <h3>Evaluating Performance Characteristic of Opportunistic Routing Protocols</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>Using ONE simulator, I evaluated the performance of opportunistic routing protocols ( epidemic and spray and wait) through an emergency scenario. This project aimed to find out if and how such protocols can be developed and used in real-life situations where mobile networks are not available due to high-traffic zones and transfer emergency messages to local authorities.</p>
+                </div>
+            </div>
+            <div class="project" data-index="4">
+                <h1>Projects</h1>
+                <h3>A MODERN CHATBOT CALLED CHATTY</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>Created a chatbot using NLP and python containing : identity manager, salute function and small talk, information retrieval, question answering and intent matching.</p>
+                </div>
+            </div>
+            <div class="project" data-index="5">
+                <h1>Projects</h1>
+                <h3>Understanding Credit Web</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>As a module for the 2nd year of my University degree I and 4 other people created and developed a website for the Experian company, located in the UK. The aim of the website was to create a simulator for Credit scores.</p>
+                </div>
+            </div>
+            <div class="project" data-index="6">
+                <h1>Projects</h1>
+                <h3>Nottingham (Forest) - From then to now</h3>
+                <a href="#" class="cta-button">View Details</a>
+                <div class="project-details">
+                    <p>Created a locative experience using various tools as people could walk through the city of Nottingham , triggering locations and hearing different stories associated with the history of Nottingham Forest F.C and Nottingham city.</p>
+                </div>
+            </div>
+            <div class="carousel-button prev-button">
+                <i class="fas fa-chevron-left"></i> Previous
+            </div>
+            <div class="carousel-button next-button">
+                Next <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="centered">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <p>Phone: Upon request</p>
+                <p>Email: kyros_1810@hotmail.com</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright@ 2023 Kyros Karayiannis</p>
+    </footer>
+    <script src="script.js"></script>    
+</body>
+</html>
