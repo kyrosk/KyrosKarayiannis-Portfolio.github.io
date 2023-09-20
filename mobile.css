@@ -12,6 +12,9 @@
     }
     #home h1 {
         font-size: 28px;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
     }
     #home .section-text {
         font-size: 18px;
