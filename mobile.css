@@ -40,6 +40,8 @@
         font-size: 15px;
         padding: 10px;
         border-radius: 5px;
+        color: darkgreen;
+        text-decoration: underline;
     }
     .project h1{
         font-size: 22px;
@@ -75,7 +77,6 @@
     .project {
         margin-bottom: 20px;
         padding: 10px;
-        border: 1px solid #ddd;
         border-radius: 5px;
     }
     .project h1 {
