@@ -8,13 +8,11 @@
 
     #home .container {
         text-align: center;
-        padding: 5px;
+        padding: 10px;
     }
     #home h1 {
         font-size: 36px;
         white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
     }
     #home .section-text {
         font-size: 18px;
