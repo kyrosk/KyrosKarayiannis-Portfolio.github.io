@@ -4,6 +4,10 @@
     }
     header h1 {
         font-size: 15px;
+        text-align: left; 
+        position: absolute; 
+        top: 0;
+        left: 0; 
     }
 
     #home .container {
@@ -21,6 +25,12 @@
         margin-top: 10px;
     }
 
+    .container h2{
+        font-size: 22px; 
+
+
+    }
+
     nav ul {
         padding: 0;
         text-align: center;
@@ -35,15 +45,16 @@
         border-radius: 5px;
     }
     .project h1{
-        font-size: 15px;
+        font-size: 22px;
 
 
 
     }
+
+    
     .container p {
         font-size: 18px;
         text-align: center;
-        text-align: justify; 
     }
     .profile-images {
         display: flex;
