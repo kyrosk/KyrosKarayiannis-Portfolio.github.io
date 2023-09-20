@@ -11,7 +11,7 @@
         padding: 10px; 
     }
     #home h1 {
-        font-size: 27px; 
+        font-size: 25px; 
         white-space: nowrap; 
         overflow: hidden; 
     }
@@ -41,8 +41,9 @@
 
     }
     .container p {
-        padding: 10px;
-        font-size: 1px;
+        font-size: 18px;
+        text-align: center;
+        text-align: justify; 
     }
     .profile-images {
         display: flex;
