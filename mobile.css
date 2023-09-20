@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .profile-images {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about-image {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 10px;
+    }
+    
+    .project-details {
+        display: none;
+    }
+}
