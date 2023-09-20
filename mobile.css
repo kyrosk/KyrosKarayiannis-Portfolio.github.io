@@ -53,13 +53,12 @@
     
     #about p {
         font-size: 18px;
-        padding: 10px;
-        width: 190%;
-        margin-left: -50%; 
+        width: 140%;
+        margin-left: -20%; 
     }
     .profile-images {
-        width: 170%; 
-        margin-left: -33%; 
+        width: 120%; 
+        margin-left: -6%; 
 
         justify-content: center;
     }
@@ -95,15 +94,15 @@
         border-radius: 5px;
     }
     .project-details {
-        width: 120%;
-        margin-left: -10%;
+        width: 80%;
+        
         font-size: 16px;
     }
 
     .contact-content p {
         font-size: 16px;
-        width: 150%;
-        margin-left: -23%;
+        width: 120%;
+        margin-left: -9%;
     }
 
     footer {
