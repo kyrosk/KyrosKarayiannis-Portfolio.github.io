@@ -4,7 +4,6 @@
     }
     header h1 {
         font-size: 15px;
-      
     }
 
     #home .container {
@@ -22,10 +21,8 @@
         margin-top: 10px;
     }
 
-    .container h2{
-        font-size: 22px; 
-
-
+    .container h2 {
+        font-size: 22px;
     }
 
     nav ul {
@@ -43,14 +40,7 @@
         color: darkgreen;
         text-decoration: underline;
     }
-    .project h1{
-        font-size: 22px;
 
-
-
-    }
-
-    
     #about p {
         font-size: 18px;
         width: 100%;
@@ -58,6 +48,7 @@
         margin: 0 auto; 
         margin-bottom: 20px;
     }
+
     .profile-images {
         display: block;
         margin: 0 auto; 
@@ -81,7 +72,6 @@
     .project h3 {
         font-size: 18px;
         margin-top: 50px;
-
     }
     .cta-button {
         font-size: 16px;
@@ -90,8 +80,25 @@
     }
     .project-details {
         width: 100%;
-        
         font-size: 16px;
+    }
+
+    #experience, #certifications {
+        padding: 20px;
+        text-align: center;
+    }
+
+    #certifications ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #certifications li a {
+        color: #0b5722;
+        text-decoration: underline;
+        font-size: 18px;
+        margin-top: 10px;
+        display: inline-block;
     }
 
     .contact-content {
@@ -104,7 +111,6 @@
     .contact-content p {
         font-size: 16px;
         margin: 10px 0; 
-
     }
 
     footer {
