@@ -1084,7 +1084,7 @@ nav ul li {
 }
 
 .project-tech {
-    display: flex;
+    display: none; /* Hide tech tags by default */
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
