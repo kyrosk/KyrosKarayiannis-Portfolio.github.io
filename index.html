@@ -4,138 +4,424 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyros Karayiannis - Portfolio</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile.css"> 
+    <link rel="stylesheet" href="mobile.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>.Kyros</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Logo Only Header -->
+    <header class="simple-header">
+        <div class="logo">
+            <span class="logo-bracket">{</span> <span class="logo-text">K</span> <span class="logo-bracket">}</span>
+        </div>
     </header>
     
-    <section id="home" class="centered">
-        <div class="container">
-            <h1>Welcome to my portfolio</h1>
-            <p class="section-text">Hello :) my name is Kyros Karayiannis</p>
-            <p class="section-text">I hold a Bachelors degree in Computer Science alongside with a Masters degree in Cyber Physical Systems</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="Kyros Karayiannis">Kyros Karayiannis</h1>
+            <div class="subtitle">
+                <p class="typing-text"></p>
+            </div>
+        </div>
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="300">
+            <p>Software Engineer with expertise in Computer Science and Cyber Physical Systems</p>
+            <div class="hero-info">
+                <div class="hero-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Barcelona, Spain</span>
+                </div>
+                <div class="hero-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>kyros_1810@hotmail.com</span>
+                </div>
+            </div>
+            <div class="hero-nav">
+                <a href="#experience" class="nav-button">Experience</a>
+                <a href="#certifications" class="nav-button">Certifications</a>
+                <a href="#about" class="nav-button">About Me</a>
+                <a href="#skills" class="nav-button">Technical Skills</a>
+                <a href="#projects" class="nav-button">Projects</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/kyros-karayiannis-627992224/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/kyrosk" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </section>
 
-    <section id="experience" class="centered">
+    <!-- Experience Section -->
+    <section id="experience" class="section-dark">
         <div class="container">
-            <h2>Professional Experience</h2>
-            <p><strong>April 2024 - Now</strong>: Currently working at <strong>Boats Group</strong> as a Software Support Engineer.</p>
-            <p><strong>INTERSHIP -> June 2021 - July 2021</strong>: <strong>Monarch Marine, Limassol, CY - (Securing marine technical services. Network monitoring)</strong></p>
-            <p><strong>INTERSHIP -> June 2021 - July 2021</strong>: <strong>Grizzly Entertainment, Limassol, CY - (Usage of simulation checker for drone testing. Open-source 3D computer graphics) </strong></p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title"><span class="highlight">Professional</span> Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">April 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Software Support Engineer</h3>
+                        <h4>Boats Group</h4>
+                        <ul class="timeline-list">
+                            <li>Maintain and improve existing code.</li>
+                            <li>Work with React.js and Node.js to ensure seamless application functionality.</li>
+                            <li>Provide technical support by troubleshooting complex system issues.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2021 - July 2021</div>
+                    <div class="timeline-content">
+                        <h3>Internship</h3>
+                        <h4>Monarch Marine, Limassol, CY</h4>
+                        <p>Securing marine technical services. Network monitoring and security implementation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">June 2021 - July 2021</div>
+                    <div class="timeline-content">
+                        <h3>Internship</h3>
+                        <h4>Grizzly Entertainment, Limassol, CY</h4>
+                        <p>Usage of simulation checker for drone testing. Open-source 3D computer graphics development.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="certifications" class="centered">
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-light">
         <div class="container">
-            <h2>Certifications</h2>
-            <p>AWS Certified Solutions Architect - Associate (<a href="https://www.credly.com/badges/f3059d8e-7f5e-4d81-9594-915f69efd619/public_url" target="_blank">Link</a>)</p>
-            <p>AWS Knowledge - Cloud Essentials (<a href="https://www.credly.com/badges/87f6ebef-1884-45b3-8a3f-222249ee7354/public_url" target="_blank">Link</a>)</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Professional <span class="highlight">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-container">
+                <div class="cert-card" data-aos="flip-left">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <p>Associate Level</p>
+                        <a href="https://www.credly.com/badges/f3059d8e-7f5e-4d81-9594-915f69efd619/public_url" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card" data-aos="flip-right">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>AWS Knowledge</h3>
+                        <p>Cloud Essentials</p>
+                        <a href="https://www.credly.com/badges/87f6ebef-1884-45b3-8a3f-222249ee7354/public_url" target="_blank" class="cert-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
-    <section id="about" class="centered">
+    <!-- About Section -->
+    <section id="about" class="section-dark">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I've spent nearly 13 years on the football field, honing my skills and cultivating a deep passion for the game. Beyond sports, I've found solace in the soothing strums of my guitar and the joy of expressing myself through singing. Yet, my life isn't confined to indoor pursuits; I have an insatiable love for fishing and outdoor sports that fuels my adventurous spirit. I thrive on adrenaline rushes and challenge myself to push boundaries. I'm also an avid traveler, constantly seeking new horizons and immersing myself in different cultures, savoring the richness of the world's diversity. I love to dive into crystal-clear waters for a refreshing swim, connecting with nature in its most elemental form. My life is a dynamic blend of sportsmanship, creativity, outdoor exploration, a relentless pursuit of new challenges, and an unquenchable thirst for discovering the beauty of our planet and its people.</p>
-            <div class="profile-images">
-                <img src="images/me.jpg" alt="Image 1" class="about-image">
-                <img src="images/guitar.jpg" alt="Image 2" class="about-image">
-                <img src="images/football.jpg" alt="Image 3" class="about-image">
-                <img src="images/fishing.jpg" alt="Image 4" class="about-image">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p>I've spent nearly 13 years on the football field, honing my skills and cultivating a deep passion for the game. Beyond sports, I've found solace in the soothing strums of my guitar and the joy of expressing myself through singing.</p>
+                    <p>My life isn't confined to indoor pursuits; I have an insatiable love for fishing and outdoor sports that fuels my adventurous spirit. I thrive on adrenaline rushes and challenge myself to push boundaries.</p>
+                    <p>I'm also an avid traveler, constantly seeking new horizons and immersing myself in different cultures, savoring the richness of the world's diversity. I love to dive into crystal-clear waters for a refreshing swim, connecting with nature in its most elemental form.</p>
+                    <p>My life is a dynamic blend of sportsmanship, creativity, outdoor exploration, a relentless pursuit of new challenges, and an unquenchable thirst for discovering the beauty of our planet and its people.</p>
+                </div>
+                
+                <div class="about-images" data-aos="fade-left">
+                    <div class="image-grid">
+                        <div class="image-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="image-overlay">
+                                <i class="fas fa-user"></i>
+                                <h3>Me</h3>
+                            </div>
+                            <img src="images/me.jpg" alt="Kyros Karayiannis" class="about-image">
+                        </div>
+                        <div class="image-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="image-overlay">
+                                <i class="fas fa-guitar"></i>
+                                <h3>Music</h3>
+                            </div>
+                            <img src="images/guitar.jpg" alt="Playing Guitar" class="about-image">
+                        </div>
+                        <div class="image-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="image-overlay">
+                                <i class="fas fa-futbol"></i>
+                                <h3>Football</h3>
+                            </div>
+                            <img src="images/football.jpg" alt="Football" class="about-image">
+                        </div>
+                        <div class="image-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="image-overlay">
+                                <i class="fas fa-fish"></i>
+                                <h3>Fishing</h3>
+                            </div>
+                            <img src="images/fishing.jpg" alt="Fishing" class="about-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="skills" class="skills-container" data-aos="fade-up">
+                <h3 class="skills-title">Technical <span class="highlight">Skills</span></h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <h4>React</h4>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                        <h4>JavaScript</h4>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                        <h4>AWS</h4>
+                    </div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h4>Databases</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="projects" class="centered">
-        <div class="project-carousel">
-            <div class="project" data-index="1">
-                <h1>Some of my projects</h1>
-                <h3>Hear and avoid - a smart gadget</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>Sensor prototype design to help people with hearing problems avoiding loud sounds from surroundings. Using 3 light and sound sensors, raspberry Pi, grove Pi and a representation of a human head, the project with the usage of python programming language, successfully presented a prototype that can be deployed in the real world.</p>
-                </div>
-            </div>
-            <div class="project" data-index="2">
-                <h1>Projects</h1>
-                <h3>User Interface Designs for Smart Home Device 
-                    Security</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>As part of my dissertation for the successful completion of my Masters degree, I 
-                        created an interactive prototype using Figma (prototype tool) to provide smart 
-                        homes privacy and security as well as the ability to manipulate, secure and control 
-                        the data of their smart home devices. Alongside with data safety, the dissertation 
-                        examined ways to support users’ security through different frameworks applied 
-                        in the prototype.</p>
-                </div>
-            </div>
-            <div class="project" data-index="3">
-                <h1>Projects</h1>
-                <h3>Evaluating Performance Characteristic of Opportunistic Routing Protocols</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>Using ONE simulator, I evaluated the performance of opportunistic routing protocols ( epidemic and spray and wait) through an emergency scenario. This project aimed to find out if and how such protocols can be developed and used in real-life situations where mobile networks are not available due to high-traffic zones and transfer emergency messages to local authorities.</p>
-                </div>
-            </div>
-            <div class="project" data-index="4">
-                <h1>Projects</h1>
-                <h3>A MODERN CHATBOT CALLED CHATTY</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>Created a chatbot using NLP and python containing : identity manager, salute function and small talk, information retrieval, question answering and intent matching.</p>
-                </div>
-            </div>
-            <div class="project" data-index="5">
-                <h1>Projects</h1>
-                <h3>Understanding Credit Web</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>As a module for the 2nd year of my University degree I and 4 other people created and developed a website for the Experian company, located in the UK. The aim of the website was to create a simulator for Credit scores.</p>
-                </div>
-            </div>
-            <div class="project" data-index="6">
-                <h1>Projects</h1>
-                <h3>Nottingham (Forest) - From then to now</h3>
-                <a href="#" class="cta-button">View Details</a>
-                <div class="project-details">
-                    <p>Created a locative experience using various tools as people could walk through the city of Nottingham , triggering locations and hearing different stories associated with the history of Nottingham Forest F.C and Nottingham city.</p>
-                </div>
-            </div>
-            <div class="carousel-button prev-button">
-                <i class="fas fa-chevron-left"></i> Previous
-            </div>
-            <div class="carousel-button next-button">
-                Next <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="centered">
+    <!-- Projects Section -->
+    <section id="projects" class="section-light">
         <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-content">
-                <p>Phone : Upon request</p>
-                <p>Email : kyros_1810@hotmail.com</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Project Cards -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Raspberry Pi</span>
+                                <span>IoT</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hear and Avoid</h3>
+                        <p>Sensor prototype design to help people with hearing problems avoiding loud sounds from surroundings. Using 3 light and sound sensors, raspberry Pi, grove Pi and a representation of a human head.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                                <span>Smart Home</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Home Device Security</h3>
+                        <p>Created an interactive prototype using Figma to provide smart homes privacy and security as well as the ability to manipulate, secure and control the data of their smart home devices.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>ONE Simulator</span>
+                                <span>Networking</span>
+                                <span>Research</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Opportunistic Routing Protocols</h3>
+                        <p>Evaluated the performance of opportunistic routing protocols through an emergency scenario using ONE simulator, focusing on real-life applications where mobile networks are unavailable.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>AI</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CHATTY: Modern Chatbot</h3>
+                        <p>Created a chatbot using NLP and Python containing identity manager, salute function and small talk, information retrieval, question answering and intent matching.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Web Development</span>
+                                <span>Finance</span>
+                                <span>Team Project</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Understanding Credit Web</h3>
+                        <p>Developed a website for Experian company as a university module, creating a simulator for credit scores with a team of 5 people.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>Location-based</span>
+                                <span>Interactive</span>
+                                <span>Storytelling</span>
+                            </div>
+                        </div>
+                        <div class="project-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Nottingham Forest - From Then to Now</h3>
+                        <p>Created a locative experience allowing people to walk through Nottingham, triggering locations and hearing different stories associated with the history of Nottingham Forest F.C and the city.</p>
+                        <div class="project-actions">
+                            <button class="project-details-btn" data-project="6">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="project-modal" id="projectModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-header">
+                        <h2 id="modalTitle"></h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalDescription"></p>
+                        <div class="modal-tech" id="modalTech"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
+    <!-- Footer will be placed directly after the Projects section -->
+    
+    <!-- Footer -->
     <footer>
-        <p>Copyright@ 2025 Kyros Karayiannis</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">{</span> <span class="logo-text">K</span> <span class="logo-bracket">}</span>
+            </div>
+            <div class="footer-info">
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>kyros_1810@hotmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Barcelona, Spain</span>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" class="footer-social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/your-username" target="_blank" class="footer-social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>Designed & Built by Kyros Karayiannis</p>
+                <p>&copy; 2025 All Rights Reserved</p>
+            </div>
+        </div>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>    
 </body>
 </html>
