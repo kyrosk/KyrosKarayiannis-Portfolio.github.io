@@ -169,236 +169,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     
-    // Interactive contact section animations
-    const contactMethodItems = document.querySelectorAll('.contact-method-item');
-    
-    // Add hover effects to contact method items
-    if (contactMethodItems) {
-        contactMethodItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                // Add a subtle pulse animation
-                this.style.transform = 'translateY(-5px)';
-                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
-                
-                // Make the arrow move
-                const arrow = this.querySelector('.method-arrow i');
-                if (arrow) {
-                    arrow.style.transform = 'translateX(5px)';
-                    arrow.style.color = 'var(--accent-color)';
-                }
-            });
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            // For now, we'll just show a success message
+            const formData = new FormData(contactForm);
+            const formValues = {};
             
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = '';
-                this.style.boxShadow = '';
-                
-                const arrow = this.querySelector('.method-arrow i');
-                if (arrow) {
-                    arrow.style.transform = '';
-                    arrow.style.color = '';
-                }
-            });
-            
-            // Add click effect
-            item.addEventListener('click', function() {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 100);
-            });
-        });
-    }
-    
-    // 3D Earth Globe
-    const earthCanvas = document.getElementById('earth-globe');
-    if (earthCanvas) {
-        // Barcelona coordinates
-        const barcelonaLat = 41.3851;
-        const barcelonaLng = 2.1734;
-        
-        // Convert latitude and longitude to 3D coordinates
-        function latLngToVector3(lat, lng, radius) {
-            const phi = (90 - lat) * (Math.PI / 180);
-            const theta = (lng + 180) * (Math.PI / 180);
-            
-            const x = -radius * Math.sin(phi) * Math.cos(theta);
-            const y = radius * Math.cos(phi);
-            const z = radius * Math.sin(phi) * Math.sin(theta);
-            
-            return new THREE.Vector3(x, y, z);
-        }
-        
-        // Initialize Three.js scene
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, earthCanvas.clientWidth / earthCanvas.clientHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: earthCanvas, antialias: true, alpha: true });
-        renderer.setSize(earthCanvas.clientWidth, earthCanvas.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        
-        // Create Earth
-        const earthRadius = 5;
-        const earthGeometry = new THREE.SphereGeometry(earthRadius, 64, 64);
-        
-        // Load Earth texture
-        const textureLoader = new THREE.TextureLoader();
-        const earthTexture = textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg');
-        const earthBumpMap = textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_normal_2048.jpg');
-        const earthSpecMap = textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_specular_2048.jpg');
-        
-        const earthMaterial = new THREE.MeshPhongMaterial({
-            map: earthTexture,
-            bumpMap: earthBumpMap,
-            bumpScale: 0.05,
-            specularMap: earthSpecMap,
-            specular: new THREE.Color('grey'),
-            shininess: 5
-        });
-        
-        const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-        scene.add(earth);
-        
-        // Add clouds
-        const cloudTexture = textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_clouds_1024.png');
-        const cloudMaterial = new THREE.MeshPhongMaterial({
-            map: cloudTexture,
-            transparent: true,
-            opacity: 0.4
-        });
-        
-        const clouds = new THREE.Mesh(
-            new THREE.SphereGeometry(earthRadius + 0.1, 64, 64),
-            cloudMaterial
-        );
-        scene.add(clouds);
-        
-        // Add atmosphere glow
-        const atmosphereGeometry = new THREE.SphereGeometry(earthRadius + 0.2, 64, 64);
-        const atmosphereMaterial = new THREE.ShaderMaterial({
-            uniforms: {},
-            vertexShader: `
-                varying vec3 vNormal;
-                void main() {
-                    vNormal = normalize(normalMatrix * normal);
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                }
-            `,
-            fragmentShader: `
-                varying vec3 vNormal;
-                void main() {
-                    float intensity = pow(0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
-                    gl_FragColor = vec4(0.3, 0.6, 1.0, 1.0) * intensity;
-                }
-            `,
-            blending: THREE.AdditiveBlending,
-            side: THREE.BackSide,
-            transparent: true
-        });
-        
-        const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
-        scene.add(atmosphere);
-        
-        // Add Barcelona marker
-        const markerGeometry = new THREE.SphereGeometry(0.1, 16, 16);
-        const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        const marker = new THREE.Mesh(markerGeometry, markerMaterial);
-        
-        // Position marker at Barcelona
-        const markerPosition = latLngToVector3(barcelonaLat, barcelonaLng, earthRadius + 0.1);
-        marker.position.set(markerPosition.x, markerPosition.y, markerPosition.z);
-        scene.add(marker);
-        
-        // Add lights
-        const ambientLight = new THREE.AmbientLight(0x404040, 1);
-        scene.add(ambientLight);
-        
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(5, 3, 5);
-        scene.add(directionalLight);
-        
-        // Set camera position
-        camera.position.z = 10;
-        
-        // Variables for rotation and zoom
-        let isHovering = false;
-        let targetRotation = { x: 0, y: 0 };
-        let currentRotation = { x: 0, y: 0 };
-        let targetZoom = 10;
-        let currentZoom = 10;
-        let rotationSpeed = 0.005;
-        
-        // Add hover event listeners
-        earthCanvas.addEventListener('mouseenter', () => {
-            isHovering = true;
-            
-            // Calculate rotation needed to show Barcelona
-            const barcelonaPosition = latLngToVector3(barcelonaLat, barcelonaLng, earthRadius);
-            const vector = barcelonaPosition.clone().normalize();
-            
-            targetRotation.y = Math.atan2(vector.x, vector.z);
-            targetRotation.x = Math.atan2(vector.y, Math.sqrt(vector.x * vector.x + vector.z * vector.z));
-            
-            // Zoom in
-            targetZoom = 7;
-        });
-        
-        earthCanvas.addEventListener('mouseleave', () => {
-            isHovering = false;
-            targetRotation = { x: 0, y: 0 };
-            targetZoom = 10;
-        });
-        
-        // Click to open Google Maps
-        earthCanvas.addEventListener('click', () => {
-            window.open('https://www.google.com/maps/place/Barcelona,+Spain', '_blank');
-        });
-        
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            // Smooth rotation
-            if (!isHovering) {
-                // Auto-rotate when not hovering
-                earth.rotation.y += rotationSpeed;
-                clouds.rotation.y += rotationSpeed * 1.1;
-            } else {
-                // Smooth transition to target rotation
-                currentRotation.x += (targetRotation.x - currentRotation.x) * 0.05;
-                currentRotation.y += (targetRotation.y - currentRotation.y) * 0.05;
-                
-                earth.rotation.x = currentRotation.x;
-                earth.rotation.y = currentRotation.y;
-                
-                clouds.rotation.x = currentRotation.x;
-                clouds.rotation.y = currentRotation.y;
+            for (let [key, value] of formData.entries()) {
+                formValues[key] = value;
             }
             
-            // Smooth zoom
-            currentZoom += (targetZoom - currentZoom) * 0.05;
-            camera.position.z = currentZoom;
+            // Reset the form
+            contactForm.reset();
             
-            // Pulse animation for marker
-            const time = Date.now() * 0.001;
-            marker.scale.set(
-                1 + Math.sin(time * 2) * 0.1,
-                1 + Math.sin(time * 2) * 0.1,
-                1 + Math.sin(time * 2) * 0.1
-            );
-            
-            renderer.render(scene, camera);
-        }
-        
-        // Handle window resize
-        function onWindowResize() {
-            camera.aspect = earthCanvas.clientWidth / earthCanvas.clientHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(earthCanvas.clientWidth, earthCanvas.clientHeight);
-        }
-        
-        window.addEventListener('resize', onWindowResize);
-        
-        // Start animation
-        animate();
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+        });
     }
 });
 
